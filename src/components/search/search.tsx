@@ -8,12 +8,12 @@ type Props = {
   importantCount: number;
 };
 
-function Search({
+const Search: React.FC<Props> = ({
   listSearchValue,
   totalCount,
   doneCount,
   importantCount
-}: Props) {
+}) => {
   return (
     <header className="header">
       <input
@@ -27,6 +27,6 @@ function Search({
       </span>
     </header>
   );
-}
+};
 
 export default Search;

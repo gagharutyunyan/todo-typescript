@@ -9,7 +9,7 @@ interface Props extends listType {
   listDone: (id: number) => void;
 }
 
-const TodoItem = ({
+const TodoItem: React.FC<Props> = ({
   id,
   content,
   important,
@@ -17,7 +17,7 @@ const TodoItem = ({
   listDelete,
   listImportant,
   listDone
-}: Props) => {
+}) => {
   let ClassNames = "list-item_content";
   if (important) ClassNames += " important";
   if (done) ClassNames += " done";

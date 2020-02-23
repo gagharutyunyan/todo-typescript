@@ -7,7 +7,7 @@ type Props = {
   addingValue: string;
 };
 
-function AddList({ listValue, listSubmit, addingValue }: Props) {
+const AddList: React.FC<Props> = ({ listValue, listSubmit, addingValue }) => {
   return (
     <form onSubmit={e => listSubmit(e)}>
       <input
@@ -20,6 +20,6 @@ function AddList({ listValue, listSubmit, addingValue }: Props) {
       <button type="submit" className="add_btn"></button>
     </form>
   );
-}
+};
 
 export default AddList;
